@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./img/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 30.5rem;
+  width: 50.5rem;
+  background-color: rgba(218, 34, 144, 0.034);
+  box-shadow: #0afff317 0px 54px 55px, #0afff317 0px -12px 30px,
+    #0afff317 0px 4px 6px, #0afff317 0px 12px 13px, #0afff317 0px -3px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen {
+  height: 30rem;
+  width: 50rem;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #0afff3;
+  font-family: Cursive;
+  border: none;
+  outline: none;
+  font-size: 72px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+  animation: neon 2s alternate-reverse infinite;
+  animation: screen 3s 1s forwards;
+}
+
+@keyframes screen {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+      0 0 40px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+    transition-delay: 1s;
+  }
+
+  100% {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+      0 0 40px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+    transition-delay: 1s;
+  }
+}
+
+#screen span {
+  position: absolute;
+  display: block;
+}
+
+#screen span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #2196f3);
+  transition-delay: 1s;
+  animation: screen1 0.7s both infinite;
+}
+
+@keyframes screen1 {
+  0% {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+  }
+}
+
+#screen span:nth-child(2) {
+  background: linear-gradient(90deg, transparent, #2196f3);
+  animation: screen2 0.7s both infinite;
+}
+
+@keyframes screen2 {
+  0% {
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width: 2px;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width: 2px;
+  }
+}
+
+#screen span:nth-child(3) {
+  background: linear-gradient(90deg, transparent, #2196f3);
+  animation: screen3 0.7s both infinite;
+}
+
+@keyframes screen3 {
+  0% {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+  }
+
+  50% {
+    right: 100%;
+  }
+
+  100% {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+  }
+}
+
+#screen span:nth-child(4) {
+  background: linear-gradient(90deg, transparent, #2196f3);
+  animation: screen4 0.7s both infinite;
+}
+
+@keyframes screen4 {
+  0% {
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 2px;
+  }
+
+  50% {
+    bottom: 100%;
+  }
+
+  100% {
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 2px;
+  }
+}
+
+#clock {
+  font-size: 5rem;
+}
+
+#calendar {
+  font-size: 4rem;
+}
+
+#calendar {
+  font-size: 3rem;
+}
+
+#current-day {
+  font-size: 2rem;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px rgba(10, 255, 243, 0.7),
+      0 0 40px rgba(10, 255, 243, 0.7), 0 0 100px rgba(10, 255, 243, 0.7);
+  }
+
+  to {
+    text-shadow: 0 0 5px rgba(10, 255, 243, 0.7),
+      0 0 20px rgba(10, 255, 243, 0.7), 0 0 60px rgba(10, 255, 243, 0.7);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    height: 99vh;
+    width: 99vw;
+  }
+
+  #screen {
+    height: calc(99vh - 1rem);
+    width: calc(99vw - 1rem);
+  }
+
+  #clock {
+    font-size: 2rem;
+  }
+
+  #calendar {
+    font-size: 4rem;
+  }
+
+  #calendar {
+    font-size: 3rem;
+  }
+
+  #current-day {
+    font-size: 2rem;
+  }
+}
